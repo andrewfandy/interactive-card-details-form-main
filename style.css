@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&family=Space+Grotesk:wght@500&display=swap");
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +13,88 @@
   font-family: "Space Grotesk";
 }
 
-.wrapper-left {
-  width: 30vw;
-  background: url(./images/bg-main-desktop.png);
+.left-section {
+  width: 35%;
+  height: 100vh;
+  background: url(images/bg-main-desktop.png);
   background-position: center center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 
-.wrapper-right {
-  width: 70vw;
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.cards {
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  width: 420px;
+  height: 220px;
+  color: var(--white);
+}
+
+.front-card {
+  background: url(images/bg-card-front.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translate(100px, 70px);
+  top: 0;
+  z-index: 1;
+}
+
+.back-card {
+  background: url(images/bg-card-back.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(120px);
+  left: 100%;
+}
+
+#card-number-show {
+  position: absolute;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  bottom: 0;
+  transform: translate(15px, -55px);
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  transform: translate(15px, -25px);
+  width: 85%;
+}
+
+#cvv {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: translate(-50px, 45px);
+}
+
+.right-section {
+  width: 65%;
+  height: 100vh;
+}
+
+.container-lg {
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  border: 1px solid black;
+  padding: 1rem;
 }
