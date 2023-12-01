@@ -23,90 +23,89 @@
     <!-- Vanilla CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="vh-100">
-    <main class="min-vh-100 d-flex justify-content-between">
-      <section class="left-section">
-        <div class="cards-container">
-          <!-- FRONT CARD -->
-          <div class="cards front-card">
-            <div class="front-container">
-              <div class="card-logo">
-                <img src="images/card-logo.svg" alt="card-logo" />
+  <body class="min-vh-100">
+    <main class="vh-100 d-flex">
+      <div
+        class="left-section h-100 d-flex justify-content-center align-content-center"
+      >
+        <div class="container-fluid m-auto">
+          <div class="cards position-relative ms-auto">
+            <div class="front-card card p-3 position-absolute">
+              <div id="on-card-logo">
+                <img src="images/card-logo.svg" alt="" />
               </div>
-              <h1 id="card-number-show">0000 0000 0000 0000</h1>
-              <div class="card-info">
-                <span id="card-name"> Jane Appleseed </span>
-                <span id="card-date">
-                  <span id="card-month">00</span>
+              <h1>0000 0000 0000 0000 0000</h1>
+              <div class="cards-detail">
+                <span id="on-card-name">JANE APPLESEED</span>
+                <span id="on-card-date">
+                  <span id="on-card-month">00</span>
                   /
-                  <span id="card-year">00</span>
+                  <span id="on-card-year">00</span>
                 </span>
               </div>
             </div>
-          </div>
-
-          <!-- BACK CARD -->
-          <div class="cards back-card">
-            <div class="back-container">
-              <span id="cvv"> 000 </span>
+            <div class="back-card card p-3 position-absolute">
+              <span id="on-card-cvc">000</span>
             </div>
           </div>
         </div>
-      </section>
-
-      <section class="right-section">
+      </div>
+      <div
+        class="right-section h-100 d-flex justify-content-center align-content-center"
+      >
         <div
-          class="container-lg d-flex justify-content-center align-items-center"
+          class="wrapper d-flex flex-column justify-content-center align-content-center w-100 h-100"
         >
-          <div class="wrapper d-flex justify-content-center align-items-center">
-            <form action="">
-              <label for="card-holder-name">
-                <p>CARDHOLDER NAME</p>
+          <div class="container-lg">
+            <form
+              action=""
+              class="container-sm d-flex justify-content-center align-content-center flex-column p-5"
+            >
+              <label for="card-holder-name" class="field-label card-name">
+                <p class="mb-1">CARDHOLDER NAME</p>
                 <input
                   type="text"
-                  name="card-holder-name"
                   id="card-holder-name"
+                  placeholder="e.g. Jane Appleseed"
                 />
               </label>
-              <label for="card-holder-number">
-                <p>CARD NUMBER</p>
+              <label for="card-number" class="field-label card-number">
+                <p class="mb-1">CARD NUMBER</p>
                 <input
-                  type="text"
-                  name="card-holder-name"
-                  id="card-holder-name"
+                  type="number"
+                  id="card-number"
+                  placeholder="e.g. 1234 5678 9123 0000"
                 />
               </label>
-              <div class="card-date">
-                <label>
-                  <p>EXP. DATE (MM/YY)</p>
-                  <input
-                    type="text"
-                    name="card-holder-name"
-                    id="card-holder-name"
-                  />
-                  <input
-                    type="text"
-                    name="card-holder-name"
-                    id="card-holder-name"
-                  />
+              <div class="card-details d-flex w-100">
+                <label
+                  for="card-expired-date"
+                  class="field-label card-exp-detail d-flex flex-column"
+                >
+                  <span class="mb-1">EXP. DATE (MM/YY)</span>
+                  <div class="wrapper-input-detail d-flex gap-1">
+                    <input type="text" id="card-exp-mm" placeholder="MM" />
+                    <input type="text" id="card-exp-yy" placeholder="YY" />
+                  </div>
+                </label>
+                <label for="card-number" class="field-label card-cvc-detail">
+                  <p class="mb-1">CVC</p>
+                  <input type="number" id="card-cvc" placeholder="e.g. 123" />
                 </label>
               </div>
-              <label for="card-cvc">
-                <p>CVC</p>
-                <input type="text" name="card-cvc" id="card-cvc" />
-              </label>
-
-              <button class="btn btn-primary p-2">Submit</button>
+              <div class="btn btn-primary my-2 mx-auto">Confirm</div>
             </form>
           </div>
         </div>
-      </section>
+      </div>
     </main>
-    <footer class="fixed-bottom text-center p-3">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded with &hearts;, by <a href="#">Andrew</a>.
+    <footer class="fixed-bottom">
+      <div class="wrapper-footer text-end mx-2">
+        <span> Challenge by </span>
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.Coded with &hearts;, by <a href="#">Andrew</a>.
+      </div>
     </footer>
 
     <!-- BOOTSTRAP JS -->
