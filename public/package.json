@@ -1,0 +1,29 @@
+{
+  "name": "interactive-card-details-form-main",
+  "version": "1.0.0",
+  "description": "Interactive Card Details Form Main practice with TailwindCSS and Javascript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/css/style.css --watch",
+    "finalize": "npx tailwindcss -o ./dist/assets/css/style.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewfandy/interactive-card-details-form-main.git"
+  },
+  "keywords": [
+    "frontend",
+    "mentor",
+    "challenge"
+  ],
+  "author": "Andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewfandy/interactive-card-details-form-main/issues"
+  },
+  "homepage": "https://github.com/andrewfandy/interactive-card-details-form-main#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}
