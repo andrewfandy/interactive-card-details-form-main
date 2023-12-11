@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="/dist/css/style.css" />
+
+    <style>
+      * {
+        border: 1px solid red;
+      }
+    </style>
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body class="font-body min-h-screen relative">
+    <main class="h-screen flex justify-between">
+      <!-- LEFT SECTION -->
+      <section
+        class="h-full flex-[0.4] bg-desktop bg-cover bg-no-repeat bg-center flex justify-center items-center"
+      >
+        <div class="w-full h-1/2 flex justify-center">
+          <div id="cards-wrapper" class="relative">
+            <!-- FRONT CARD -->
+            <div
+              id="front-card"
+              class="bg-front-card bg-cover bg-no-repeat bg-center p-2 h-[230px] w-[400px] rounded-[0.25rem] shadow-lg absolute -top-[50px] -left-[125px]"
+            >
+              <div>
+                <img src="/images/card-logo.svg" alt="card-logo" />
+                <h1 id="oncard-number">0000 0000 0000 0000</h1>
+                <div id="oncard-details">
+                  <span id="oncard-name">Jane Appleseed</span>
+                  <span id="oncard-date">
+                    <span id="oncard-month">00</span>
+                    /
+                    <span id="oncard-year">00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- BACK CARD -->
+            <div
+              id="back-card"
+              class="bg-back-card bg-cover bg-no-repeat bg-center p-2 h-[230px] w-[400px] rounded-[0.25rem] shadow-lg absolute -bottom-[90px] -left-[150px]"
+            >
+              <div>
+                <span id="oncard-cvc">000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT SECTION -->
+      <section class="flex-1 flex justify-center items-center">
+        <div id="wrapper" class="max-w-lg">
+          <form action="">
+            <label for="cardholder-name" id="cardholder-name">
+              <p>Cardholder Name</p>
+              <input
+                type="text"
+                name="cardholder-name"
+                id="cardholder-name"
+                placeholder="Jane Appleseed"
+              />
+            </label>
+
+            <label for="card-number" id="card-number">
+              <p>Card Number</p>
+              <input
+                type="number"
+                name="card-number"
+                id="card-number"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+            </label>
+
+            <label for="card-details" id="card-details">
+              <p>Exp. Date (MM/YY)</p>
+              <div>
+                <input
+                  type="number"
+                  name="card-month"
+                  id="card-month"
+                  placeholder="MM"
+                />
+                <input
+                  type="number"
+                  name="card-year"
+                  id="card-year"
+                  placeholder="YY"
+                />
+              </div>
+            </label>
+            <label for="card-cvc" id="card-cvc">
+              <p>CVC</p>
+              <input
+                type="number"
+                name="card-cvc"
+                id="card-cvc"
+                placeholder="e.g. 123"
+              />
+            </label>
+
+            <button type="submit">Confirm</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="p-3 text-center absolute bottom-0 w-full">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#" target="_blank">Andrew</a>.
+    </footer>
+  </body>
+</html>

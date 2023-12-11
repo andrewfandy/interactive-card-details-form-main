@@ -31,3 +31,8 @@ The designs were created to the following widths:
 
 - Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
 - Weights: 500
+
+### Breakpoints
+
+- 1000px : tab (Smaller cards & form)
+- 540px : mobile (change design to mobile)
