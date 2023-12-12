@@ -14,26 +14,28 @@
 
     <link rel="stylesheet" href="/dist/css/style.css" />
 
-    <style>
+    <!-- DEBUGGING -->
+
+    <!-- <style>
       * {
         border: 1px solid red;
       }
-    </style>
+    </style> -->
 
     <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body class="font-body min-h-screen relative">
-    <main class="h-screen flex justify-between">
+    <main class="h-screen flex flex-col">
       <!-- LEFT SECTION -->
       <section
-        class="h-full flex-[0.4] bg-desktop bg-cover bg-no-repeat bg-center flex justify-center items-center"
+        class="h-[40%] bg-mobile bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center"
       >
-        <div class="w-full h-1/2 flex justify-center">
-          <div id="cards-wrapper" class="relative">
+        <div class="flex justify-center items-center w-full h-1/2">
+          <div id="cards-wrapper" class="relative h-full bg-yellow-500 w-1/2">
             <!-- FRONT CARD -->
             <div
               id="front-card"
-              class="bg-front-card bg-cover bg-no-repeat bg-center p-2 h-[230px] w-[400px] rounded-[0.25rem] shadow-lg absolute -top-[50px] -left-[125px]"
+              class="bg-front-card bg-cover bg-no-repeat bg-center p-2 h-mobile w-mobile rounded-[0.5rem] shadow-lg z-10"
             >
               <div>
                 <img src="/images/card-logo.svg" alt="card-logo" />
@@ -52,7 +54,7 @@
             <!-- BACK CARD -->
             <div
               id="back-card"
-              class="bg-back-card bg-cover bg-no-repeat bg-center p-2 h-[230px] w-[400px] rounded-[0.25rem] shadow-lg absolute -bottom-[90px] -left-[150px]"
+              class="bg-back-card bg-cover bg-no-repeat bg-center p-2 h-mobile w-mobile rounded-[0.5rem] shadow-lg "
             >
               <div>
                 <span id="oncard-cvc">000</span>
@@ -63,8 +65,8 @@
       </section>
 
       <!-- RIGHT SECTION -->
-      <section class="flex-1 flex justify-center items-center">
-        <div id="wrapper" class="max-w-lg">
+      <section class="h-full flex bg-red-500 justify-center items-center">
+        <div id="wrapper" class="w-full">
           <form action="">
             <label for="cardholder-name" id="cardholder-name">
               <p>Cardholder Name</p>

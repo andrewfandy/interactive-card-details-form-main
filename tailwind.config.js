@@ -7,6 +7,15 @@ module.exports = {
         body: ["Space Grotesk", "Arial", "Sans-serief"],
       },
 
+      width: {
+        mobile: "300px",
+        desktop: "400px",
+      },
+      height: {
+        mobile: "180px",
+        desktop: "230px",
+      },
+
       fontSize: {
         default: "18px",
       },
